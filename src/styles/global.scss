@@ -1,0 +1,22 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+@import 'fonts';
+
+body {
+  font-family: 'Roboto', sans-serif;
+  font-display: swap;
+  font-weight: 500;
+  font-style: normal;
+  @apply bg-black;
+}
+
+.bg-gradient {
+  background: linear-gradient(269.3deg, #0077fe 2.1%, #00bfe9 93.16%);
+}
+
+.btn {
+  @apply text-white font-bold text-sm rounded px-8 py-2;
+  @extend .bg-gradient;
+}
