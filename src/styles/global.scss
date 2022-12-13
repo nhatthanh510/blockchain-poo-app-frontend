@@ -17,6 +17,6 @@ body {
 }
 
 .btn {
-  @apply text-white font-bold text-sm rounded px-8 py-2;
+  @apply text-white font-bold text-sm rounded px-8 py-2 hover:scale-105 transition-all duration-200;
   @extend .bg-gradient;
 }

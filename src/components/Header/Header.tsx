@@ -7,11 +7,10 @@ import { FaTelegramPlane } from 'react-icons/fa'
 import social from '@/assets/images/social.png'
 import Select from 'react-select'
 import { formatAddress } from '@/services/frontend'
+import currency from '@/assets/images/currency.png'
 
 const options = [
-  { value: 'chocolate', label: 'Chocolate' },
-  { value: 'strawberry', label: 'Strawberry' },
-  { value: 'vanilla', label: 'Vanilla' },
+  { value: 'chocolate', label: <img src={currency} width={23} height={23} /> },
 ]
 
 export default function Header() {
