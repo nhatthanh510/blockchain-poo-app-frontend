@@ -5,13 +5,8 @@ import logo from '@/assets/images/logo.png'
 import { BsTwitter } from 'react-icons/bs'
 import { FaTelegramPlane } from 'react-icons/fa'
 import social from '@/assets/images/social.png'
-import Select from 'react-select'
 import { formatAddress } from '@/services/frontend'
-import currency from '@/assets/images/currency.png'
-
-const options = [
-  { value: 'chocolate', label: <img src={currency} width={23} height={23} /> },
-]
+import SelectCurrency from './SelectCurrency'
 
 export default function Header() {
   return (
@@ -52,7 +47,7 @@ export default function Header() {
             </li>
           </ul>
           <div className='flex gap-[10px] items-center'>
-            <Select options={options} />
+            <SelectCurrency />
             <button className='btn btn-sm'>Connect Wallet</button>
             <span className='bg-[#20262f] rounded py-2 text-sm px-8 text-white'>
               {formatAddress('0x6509asdasdasdasd25c6ce')}

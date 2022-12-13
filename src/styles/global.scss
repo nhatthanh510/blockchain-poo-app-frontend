@@ -20,3 +20,23 @@ body {
   @apply text-white font-bold text-sm rounded px-8 py-2 hover:scale-105 transition-all duration-200;
   @extend .bg-gradient;
 }
+
+.currency {
+  .react-select {
+    &__control {
+      @apply bg-[#20262F] border-none;
+    }
+    &__indicator {
+      @apply px-1;
+    }
+    .react-select__value-container {
+      @apply pr-0;
+    }
+    &__menu {
+      @apply bg-[#20262F];
+    }
+    &__option {
+      @apply hover:bg-white cursor-pointer;
+    }
+  }
+}
