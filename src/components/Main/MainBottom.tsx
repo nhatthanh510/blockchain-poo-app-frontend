@@ -1,0 +1,167 @@
+import React from 'react'
+import { Tab, TabList, TabPanel, Tabs } from 'react-tabs'
+
+type Props = {}
+
+export default function MainBottom({}: Props) {
+  return (
+    <Tabs className='token-list'>
+      <TabList>
+        <Tab>Token Tx</Tab>
+        <Tab>Wallet Tx</Tab>
+        <Tab>Buyers</Tab>
+        <Tab>Sellers</Tab>
+      </TabList>
+      <TabPanel>
+        <table className='token-table'>
+          <thead>
+            <tr>
+              <th>Tokens</th>
+              <th>Price</th>
+              <th>Price/Token</th>
+              <th>Time</th>
+              <th>Tx</th>
+            </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+              </td>
+              <td>
+                <p>0x3e34</p>
+                <p>Track</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+              </td>
+              <td>
+                <p>0x3e34</p>
+                <p>Track</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+              </td>
+              <td>
+                <p>0x3e34</p>
+                <p>Track</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+              </td>
+              <td>
+                <p>0x3e34</p>
+                <p>Track</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+              </td>
+              <td>
+                <p>0x3e34</p>
+                <p>Track</p>
+              </td>
+            </tr>
+            <tr>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+                <p>MTT</p>
+              </td>
+              <td>
+                <p>1,000,000</p>
+              </td>
+              <td>
+                <p>0x3e34</p>
+                <p>Track</p>
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </TabPanel>
+      <TabPanel>
+        <h2>Any content 2</h2>
+      </TabPanel>
+      <TabPanel>
+        <h2>Any content 3</h2>
+      </TabPanel>
+      <TabPanel>
+        <h2>Any content 4</h2>
+      </TabPanel>
+    </Tabs>
+  )
+}
