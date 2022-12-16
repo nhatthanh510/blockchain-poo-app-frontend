@@ -6,7 +6,7 @@ type Props = {}
 
 export default function LeftCol({}: Props) {
   return (
-    <div className='w-1/4  pt-7 pb-7 border-r border-gray-700'>
+    <div className='lg:w-1/4  pt-7 pb-7 lg:border-r border-gray-700'>
       <div className='pb-6 border-gray-700 border-b '>
         <p className='uppercase text-gray-500'>Total Supply</p>
         <p className='text-lg mt-1'>1.000.000.000</p>
@@ -18,7 +18,7 @@ export default function LeftCol({}: Props) {
         </p>
         <p className='text-lg mt-1 text-green-500'>$2.340.000</p>
       </div>
-      <div className='p-4 pr-4'>
+      <div className='py-4 lg:pr-4'>
         <div className='bg-[#202531] rounded-sm p-3 text-sm mt-[10px]'>
           <p>
             <span className='text-gradient'>Pc v2</span> | DGZ/BNB LP Holdings:
@@ -45,7 +45,7 @@ export default function LeftCol({}: Props) {
         <img
           src={bannerBot}
           alt='Banner'
-          className='max-w-[200px] mx-auto mt-7'
+          className='max-w-[300px] mx-auto mt-4 lg:mt-7 lg:pr-4'
         />
       </Link>
     </div>

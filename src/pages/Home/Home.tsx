@@ -5,9 +5,9 @@ import RightCol from '@/components/RightCol'
 
 const Home = () => {
   return (
-    <div className='container mx-auto  '>
+    <div className='container mx-auto px-4'>
       <HotPair />
-      <div className='flex gap-5'>
+      <div className='lg:flex gap-5'>
         <LeftCol />
         <Main />
         <RightCol />
