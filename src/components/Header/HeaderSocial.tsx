@@ -8,7 +8,7 @@ type Props = {}
 
 export default function HeaderSocial({}: Props) {
   return (
-    <ul className='flex gap-[10px]'>
+    <ul className='flex gap-[10px] mt-4 md:mt-0 justify-center md:justify-start'>
       <li>
         <Link to='https:google.com' target='_blank'>
           <span className='w-[22px] h-[22px] rounded-md bg-[#094cbc] block text-white text-sm pt-1'>

@@ -53,10 +53,10 @@ body {
   @apply mt-4;
   .react-tabs {
     &__tab-list {
-      @apply bg-[#12151D] inline-flex gap-3 cursor-pointer;
+      @apply bg-[#12151D] flex md:inline-flex gap-2 md:gap-3 cursor-pointer text-xs md:text-base;
     }
     &__tab {
-      @apply px-4 py-2 rounded-lg outline-none;
+      @apply px-1 md:px-4 py-2 rounded-lg outline-none;
       &:hover,
       &.react-tabs__tab--selected {
         @extend .bg-gradient;
@@ -70,7 +70,7 @@ body {
 }
 
 .scrollbar::-webkit-scrollbar {
-  @apply w-[3px] bg-[#3B3B3C] rounded-full;
+  @apply w-[3px] h-[3px] bg-[#3B3B3C] rounded-full;
 }
 
 .scrollbar::-webkit-scrollbar-thumb {
@@ -85,7 +85,7 @@ body {
     &:nth-child(1),
     &:nth-child(2),
     &:nth-child(3) {
-      @apply text-right;
+      @apply md:text-right;
     }
   }
 
@@ -105,9 +105,10 @@ body {
     @apply font-normal text-gray-500 py-4;
   }
   td {
+    @apply px-2;
     p {
       &:nth-child(2) {
-        @apply text-[10px] -mt-1;
+        @apply text-xs -mt-1;
       }
     }
     &:last-child {
@@ -135,7 +136,7 @@ body {
         @apply font-bold;
       }
       &:nth-child(2) {
-        @apply text-gray-500 text-[10px] mt-0.5;
+        @apply text-gray-500 text-xs mt-0.5;
       }
     }
   }

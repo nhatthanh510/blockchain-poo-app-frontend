@@ -7,8 +7,8 @@ type Props = {}
 
 export default function RightCol({}: Props) {
   return (
-    <div className='w-1/4'>
-      <div className='bg-[#494747] rounded-lg px-4 py-7 text-xs'>
+    <div className='lg:w-1/4 pb-4 lg:pb-0'>
+      <div className='bg-[#494747] rounded-lg px-4 py-7 text-xs mt-4 lg:mt-0'>
         <div>
           <p>Slippage</p>
           <div className='flex mt-3 bg-[#1A1D27] rounded-lg'>
@@ -58,7 +58,7 @@ export default function RightCol({}: Props) {
             />
           </div>
         </div>
-        <div className='mt-6'>
+        <div className='mt-6 flex gap-4'>
           <button className='btn w-full rounded-full py-3 text-sm'>Swap</button>
         </div>
       </div>
