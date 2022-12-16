@@ -45,7 +45,7 @@ export default function LeftCol({}: Props) {
         <img
           src={bannerBot}
           alt='Banner'
-          className='max-w-[300px] mx-auto mt-4 lg:mt-7 lg:pr-4'
+          className='max-w-[300px] w-full mx-auto mt-4 lg:mt-7 lg:pr-4'
         />
       </Link>
     </div>
