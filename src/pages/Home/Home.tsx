@@ -1,10 +1,17 @@
-import { Link } from 'react-router-dom'
+import HotPair from '@/components/HotPair'
+import LeftCol from '@/components/LeftCol'
+import Main from '@/components/Main'
+import RightCol from '@/components/RightCol'
 
 const Home = () => {
   return (
-    <div id='error-page'>
-      <Link to={`dashboard/1`}>Your Name</Link>
-      <h1 className='text-red-500 text-4xl'>Home page!</h1>
+    <div className='container mx-auto  '>
+      <HotPair />
+      <div className='flex gap-5'>
+        <LeftCol />
+        <Main />
+        <RightCol />
+      </div>
     </div>
   )
 }

@@ -9,14 +9,134 @@ body {
   font-display: swap;
   font-weight: 500;
   font-style: normal;
-  @apply bg-black;
+  @apply bg-black text-white;
 }
 
 .bg-gradient {
   background: linear-gradient(269.3deg, #0077fe 2.1%, #00bfe9 93.16%);
 }
 
+.text-gradient {
+  background: linear-gradient(269.3deg, #0077fe 2.1%, #00bfe9 93.16%);
+  -webkit-background-clip: text;
+  -webkit-text-fill-color: transparent;
+  background-clip: text;
+  text-fill-color: transparent;
+}
+
 .btn {
-  @apply text-white font-bold text-sm rounded px-8 py-2;
+  @apply text-white font-bold  hover:scale-105 transition-all duration-200 outline-none;
   @extend .bg-gradient;
+}
+
+.currency {
+  .react-select {
+    &__control {
+      @apply bg-[#20262F] border-none;
+    }
+    &__indicator {
+      @apply px-1;
+    }
+    .react-select__value-container {
+      @apply pr-0;
+    }
+    &__menu {
+      @apply bg-[#20262F];
+    }
+    &__option {
+      @apply hover:bg-white cursor-pointer;
+    }
+  }
+}
+
+.token-list {
+  @apply mt-4;
+  .react-tabs {
+    &__tab-list {
+      @apply bg-[#12151D] inline-flex gap-3 cursor-pointer;
+    }
+    &__tab {
+      @apply px-4 py-2 rounded-lg outline-none;
+      &:hover,
+      &.react-tabs__tab--selected {
+        @extend .bg-gradient;
+      }
+    }
+    &__tab-panel {
+      @apply max-h-64 overflow-auto;
+      @extend .scrollbar;
+    }
+  }
+}
+
+.scrollbar::-webkit-scrollbar {
+  @apply w-[3px] bg-[#3B3B3C] rounded-full;
+}
+
+.scrollbar::-webkit-scrollbar-thumb {
+  @apply rounded-full bg-blue-500;
+}
+
+.token-table {
+  @apply w-full text-sm;
+  th,
+  td {
+    @apply py-2 text-center;
+    &:nth-child(1),
+    &:nth-child(2),
+    &:nth-child(3) {
+      @apply text-right;
+    }
+  }
+
+  tr {
+    &:nth-child(odd) {
+      td {
+        @apply bg-[#12151D] text-red-600;
+      }
+    }
+    &:nth-child(even) {
+      td {
+        @apply text-green-600;
+      }
+    }
+  }
+  th {
+    @apply font-normal text-gray-500 py-4;
+  }
+  td {
+    p {
+      &:nth-child(2) {
+        @apply text-[10px] -mt-1;
+      }
+    }
+    &:last-child {
+      p {
+        @extend .text-gradient;
+      }
+    }
+  }
+}
+
+.wallet-table {
+  @apply w-full text-xs bg-[#181A25] rounded-xl mt-4;
+  td,
+  th {
+    @apply text-left px-4 py-3;
+  }
+  tbody {
+    tr {
+      @apply border-t border-gray-700;
+    }
+  }
+  td {
+    p {
+      &:first-child {
+        @apply font-bold;
+      }
+      &:nth-child(2) {
+        @apply text-gray-500 text-[10px] mt-0.5;
+      }
+    }
+  }
 }
