@@ -1,11 +1,61 @@
-import React from 'react'
+import React, { useState } from 'react'
 import swap from '@/assets/images/swap.png'
-import { AiOutlineStar } from 'react-icons/ai'
+import { AiFillStar, AiOutlineStar } from 'react-icons/ai'
 import { BsTrash } from 'react-icons/bs'
+import wallet from '@/services/walletData.json'
 
-type Props = {}
+type Props = {
+  id: string
+  name: string
+  description: string
+  balance: number
+  price: number
+  favorite: boolean
+}
 
-export default function RightCol({}: Props) {
+export default function RightCol() {
+  const [data, setData] = useState<Props[]>(wallet)
+  const handleRemove = (id: string) => {
+    setData(data.filter((item) => item.id !== id))
+  }
+  const handleFavorite = (id: string) => {
+    console.log(id)
+  }
+  const Wallet = ({
+    name,
+    description,
+    balance,
+    price,
+    favorite,
+    id,
+  }: Props) => {
+    return (
+      <tr>
+        <td>
+          <p>{name}</p>
+          <p>{description}</p>
+        </td>
+        <td>
+          <p>{balance}</p>
+          <p className='text-green-500'>${price}</p>
+        </td>
+        <td className='flex gap-2 text-base text-gray-300'>
+          <button
+            className='hover:text-yellow-500'
+            onClick={() => handleFavorite(id)}>
+            {favorite ? (
+              <AiFillStar className='text-yellow-500' />
+            ) : (
+              <AiOutlineStar />
+            )}
+          </button>
+          <button onClick={() => handleRemove(id)}>
+            <BsTrash />
+          </button>
+        </td>
+      </tr>
+    )
+  }
   return (
     <div className='lg:w-1/4 pb-4 lg:pb-0'>
       <div className='bg-[#494747] rounded-lg px-4 py-7 text-xs mt-4 lg:mt-0'>
@@ -76,60 +126,9 @@ export default function RightCol({}: Props) {
             </tr>
           </thead>
           <tbody>
-            <tr>
-              <td>
-                <p>BNB</p>
-                <p>Binance Smart Chain</p>
-              </td>
-              <td>
-                <p>1,251,200,000</p>
-                <p className='text-green-500'>$1,258</p>
-              </td>
-              <td className='flex gap-2 text-base text-gray-300'>
-                <button>
-                  <AiOutlineStar />
-                </button>
-                <button>
-                  <BsTrash />
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>BNB</p>
-                <p>Binance Smart Chain</p>
-              </td>
-              <td>
-                <p>1,251,200,000</p>
-                <p className='text-green-500'>$1,258</p>
-              </td>
-              <td className='flex gap-2 text-base text-gray-300'>
-                <button>
-                  <AiOutlineStar />
-                </button>
-                <button>
-                  <BsTrash />
-                </button>
-              </td>
-            </tr>
-            <tr>
-              <td>
-                <p>BNB</p>
-                <p>Binance Smart Chain</p>
-              </td>
-              <td>
-                <p>1,251,200,000</p>
-                <p className='text-green-500'>$1,258</p>
-              </td>
-              <td className='flex gap-2 text-base text-gray-300'>
-                <button>
-                  <AiOutlineStar />
-                </button>
-                <button>
-                  <BsTrash />
-                </button>
-              </td>
-            </tr>
+            {data.map((item) => (
+              <Wallet {...item} key={item.id} />
+            ))}
           </tbody>
         </table>
       </div>
