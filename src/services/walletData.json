@@ -1,0 +1,42 @@
+[
+  {
+    "id": "1",
+    "name": "BNB",
+    "description": "Binance Smart Chain",
+    "balance": 1251200200,
+    "price": 1258,
+    "favorite": true
+  },
+  {
+    "id": "2",
+    "name": "MTT",
+    "description": "Metaverse Token",
+    "balance": 1251200200,
+    "price": 1258,
+    "favorite": false
+  },
+  {
+    "id": "3",
+    "name": "BNB",
+    "description": "Binance Smart Chain",
+    "balance": 1251200200,
+    "price": 1258,
+    "favorite": true
+  },
+  {
+    "id": "4",
+    "name": "MTT",
+    "description": "Metaverse Token",
+    "balance": 1251200200,
+    "price": 1258,
+    "favorite": false
+  },
+  {
+    "id": "5",
+    "name": "BNB",
+    "description": "Binance Smart Chain",
+    "balance": 1251200200,
+    "price": 1258,
+    "favorite": true
+  }
+]

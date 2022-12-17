@@ -53,7 +53,7 @@ body {
   @apply mt-4;
   .react-tabs {
     &__tab-list {
-      @apply bg-[#12151D] flex md:inline-flex gap-2 md:gap-3 cursor-pointer text-xs md:text-base;
+      @apply bg-[#12151D] flex md:inline-flex gap-2 md:gap-3 cursor-pointer text-xs md:text-base justify-center md:justify-start;
     }
     &__tab {
       @apply px-1 md:px-4 py-2 rounded-lg outline-none;
