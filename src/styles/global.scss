@@ -28,7 +28,7 @@ body {
   @apply text-white font-bold  hover:scale-105 transition-all duration-200 outline-none;
   @extend .bg-gradient;
 }
-
+.main-search,
 .currency {
   .react-select {
     &__control {
@@ -42,11 +42,18 @@ body {
     }
     &__menu {
       @apply bg-[#20262F];
+      &-list {
+        @extend .scrollbar;
+      }
     }
     &__option {
-      @apply hover:bg-white cursor-pointer;
+      @apply hover:bg-gray-700 cursor-pointer bg-[#20262F] border-t border-gray-700 first:border-0;
     }
   }
+}
+
+.main-search {
+  @apply w-full;
 }
 
 .token-list {

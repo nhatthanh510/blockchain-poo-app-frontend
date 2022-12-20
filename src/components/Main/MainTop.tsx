@@ -3,9 +3,33 @@ import { BsSearch } from 'react-icons/bs'
 import icon1 from '@/assets/images/icon-1.png'
 import icon2 from '@/assets/images/icon-2.png'
 import reload from '@/assets/images/reload.png'
-type Props = {}
+import Select from 'react-select'
+import { Link } from 'react-router-dom'
 
-export default function MainTop({}: Props) {
+const SelectOption = () => (
+  <div className='text-sm p-3'>
+    <Link to='/test'>
+      <p className='uppercase'>METALAND TOKEN (LAND)</p>
+      <p className='text-[10px] text-gray-500'>
+        0xB27ADAfFB9fEa1801459a1a81B17218288c097cc
+      </p>
+      <p className='uppercase text-right'>
+        LP: 169.04 BNB <span className='text-green-600'>($46,130)</span>
+      </p>
+    </Link>
+  </div>
+)
+
+const options = [
+  {
+    value: 'METALAND TOKEN (LAND) 0xB27ADAfFB9fEa1801459a1a81B17218288c097cc',
+    label: <SelectOption />,
+  },
+  { value: 'token', label: <SelectOption /> },
+  { value: 'vanilla', label: <SelectOption /> },
+]
+
+export default function MainTop() {
   return (
     <div className='md:flex justify-between'>
       <div className=''>
@@ -20,12 +44,13 @@ export default function MainTop({}: Props) {
           </div>
         </div>
         <div className='flex gap-[10px] mt-4'>
-          <input
-            type='text'
-            placeholder='Enter token name/address...'
-            className='w-full bg-[#1d2130] text-xs text-[#cacaca] py-3 px-4 rounded-lg outline-none'
+          <Select
+            options={options}
+            className='main-search react-select-container'
+            classNamePrefix='react-select'
+            menuIsOpen
           />
-          <button className='btn py-3 px-4 rounded-sm'>
+          <button className='btn py-2 px-4 rounded-sm'>
             <BsSearch />
           </button>
         </div>
