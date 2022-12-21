@@ -27,6 +27,10 @@ body {
 .btn {
   @apply text-white font-bold  hover:scale-105 transition-all duration-200 outline-none;
   @extend .bg-gradient;
+  &:disabled {
+    background: none;
+    @apply hover:scale-100 bg-gray-500;
+  }
 }
 .main-search,
 .currency {
@@ -70,7 +74,27 @@ body {
       }
     }
     &__tab-panel {
-      @apply max-h-64 overflow-auto;
+      @apply max-h-60 overflow-auto;
+      @extend .scrollbar;
+    }
+  }
+}
+
+.home-list {
+  @apply mt-4 text-center;
+  .react-tabs {
+    &__tab-list {
+      @apply bg-[#12151D] flex md:inline-flex gap-2 md:gap-3 cursor-pointer text-xs md:text-base justify-center;
+    }
+    &__tab {
+      @apply px-1 md:px-4 py-2 rounded-lg outline-none;
+      &:hover,
+      &.react-tabs__tab--selected {
+        @extend .bg-gradient;
+      }
+    }
+    &__tab-panel {
+      @apply max-h-60 overflow-auto text-left;
       @extend .scrollbar;
     }
   }
@@ -145,6 +169,38 @@ body {
       &:nth-child(2) {
         @apply text-gray-500 text-xs mt-0.5;
       }
+    }
+  }
+}
+
+.result-table {
+  @apply mt-4 text-sm w-full;
+  th,
+  td {
+    @apply px-2 py-1;
+  }
+  th {
+    &:first-child,
+    &:nth-child(2) {
+      width: 45%;
+    }
+    @apply text-center bg-[#181A25];
+  }
+  td {
+    @apply text-center border border-[#181a25] text-sm;
+    p {
+      &:nth-child(2) {
+        @apply text-xs text-gray-500;
+      }
+    }
+    &:nth-child(2) {
+      p {
+        &:nth-child(2) {
+          @apply text-green-500;
+        }
+      }
+    }
+    &:last-child {
     }
   }
 }

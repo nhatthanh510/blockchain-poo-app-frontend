@@ -15,7 +15,8 @@
     "react-router-dom": "^6.4.5",
     "react-select": "^5.7.0",
     "react-tabs": "^6.0.0",
-    "sass": "^1.56.2"
+    "sass": "^1.56.2",
+    "zustand": "^4.1.5"
   },
   "devDependencies": {
     "@types/react": "^18.0.26",
