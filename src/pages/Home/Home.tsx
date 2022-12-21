@@ -1,18 +1,21 @@
-import HotPair from '@/components/HotPair'
-import LeftCol from '@/components/LeftCol'
-import Main from '@/components/Main'
-import RightCol from '@/components/RightCol'
+import ChartList from '@/components/Home/ChartList'
+import HomeText from '@/components/Home/HomeText'
+import SearchBar from '@/components/Main/SearchBar'
+import Popup from '@/components/Popup'
+import { Link } from 'react-router-dom'
 
 const Home = () => {
   return (
-    <div className='container mx-auto px-4'>
-      <HotPair />
-      <div className='lg:flex gap-5'>
-        <LeftCol />
-        <Main />
-        <RightCol />
+    <>
+      <div className='container mx-auto px-4'>
+        <HomeText />
+        <div className='mx-auto max-w-md mt-4'>
+          <SearchBar />
+        </div>
+        <ChartList />
       </div>
-    </div>
+      <Popup />
+    </>
   )
 }
 
